@@ -1,0 +1,44 @@
+<?php
+if (empty($_POST)){
+	echo '
+<html>
+	<head><title>Ejempo de formulario sencillo</title></head>
+	<body>
+		<h3>Formulario muy sencillo</h3>
+		<form action="practica14.php" method="post">
+			
+			Op1:  <input type="text" name="op1" value=""/><br><br>
+			Op2:  <input type="text" name="op2" value=""/><br><br>
+
+			Operacion <select name ="operacion">
+				<option value="+">Suma</option>
+				<option value="-">Resta</option>
+				<option value="*">Multiplicacion</option>
+				<option value="/">Division</option>
+			</select>
+
+			<input type="submit" value="Realizar operacion"/>
+		</form>
+	</body>
+</html>';
+}else{
+	if ($_POST["op1"]== "" || $_POST["op2"] == "") {
+		echo "introduce el valor de los operadores";
+	}else{
+		switch ($_POST["operacion"]) {
+			case "+":
+				echo "suma: " . $_POST["op1"]+$_POST["op2"];
+				break;
+			case "-":
+				echo "resta: " . $_POST["op1"]-$_POST["op2"];
+				break;
+			case "*":
+				echo "multiplicacion: " . $_POST["op1"]*$_POST["op2"];
+				break;
+			case "/":
+				echo "division: " . $_POST["op1"]/$_POST["op2"];
+				break;
+		}
+	}
+}
+?>

@@ -1,0 +1,25 @@
+<html>
+	<head><title>Ejempo de formulario sencillo</title></head>
+	<body>
+		<h3>Formulario muy sencillo</h3>
+		<form action="practica13.php" method="post">
+			
+			<h1>Elija producto</h1>
+				<input type="checkbox" name="articulo[]" value="Articulos Ruedas"><label>Articulos Ruedas</label>
+				<input type="checkbox" name="articulo[]" value="aceite"><label>Aceite</label>
+				<input type="checkbox" name="articulo[]" value="Liquido de freno"><label>Liquido de freno</label>
+				<input type="checkbox" name="articulo[]" value="Otros"><label>Otros</label><br><br>
+
+			Cantidad:  <input type="int" name="cantidad" value=""/><br><br>
+			DNI(sin letra):  <input type="int" name="dni" value=""/><br><br>
+			E-mail:  <input type="email" name="mail" value=""/><br><br>
+
+			Forma de pago <select name ="pago" id="pago">
+				<option value="VISA">VISA</option>
+				<option value="MASTER CARD">MASTER CARD</option>
+			</select>
+
+			<input type="submit" value="Realizar pedido"/>
+		</form>
+	</body>
+</html>

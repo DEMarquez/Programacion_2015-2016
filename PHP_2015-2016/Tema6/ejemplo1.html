@@ -1,0 +1,23 @@
+<html>
+	<head><title>Ejempo de formulario sencillo</title></head>
+	<body>
+		<h3>Formulario muy sencillo</h3>
+		<form action="ejemplo1.php" method="get">
+			
+			<input type="radio" name="pago" value="Visa" checked="Visa"/>Pago targeta Visa<br>
+			<input type="radio" name="pago" value="Master Card"/>Pago targeta Master Card<br><br>
+
+			Distribuidor <select name ="distribuidor" id="Distribuidor">
+				<option value="Seur">Seur</option>
+				<option value="Correos">correos</option>
+				<option value="Uspost">uspost</option>
+			</select><br><br><br>
+
+			Producto:<br>
+				<input type="checkbox" name="productos[]" value="Fotocopiadora">Fotocopiadora<br>
+				<input type="checkbox" name="productos[]" value="Toner">Toner<br>
+				<input type="checkbox" name="productos[]" value="Carpetas">Carpetas<br><br>
+			<input type="submit" value="Realizar pedido"/>
+		</form>
+	</body>
+</html>

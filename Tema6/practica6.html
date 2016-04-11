@@ -1,0 +1,21 @@
+<html>
+	<head><title>Ejempo de formulario sencillo</title></head>
+	<body>
+		<?php
+		if(empty($_POST)){
+			echo '
+		<form action="practica6.php" method="post">
+			Introduzca la cantidad de euros:
+			<input type="text" name="euros" value=""/>
+			<input type="submit" value="Enviar"/>
+		
+		</form>';
+			}else{
+
+				$pesetas=166.386;
+					$op=$_POST["euros"]*$pesetas;
+				echo "Son: $op pesetas";
+				}
+			?>
+	</body>
+</html>
